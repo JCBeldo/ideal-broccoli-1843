@@ -1,0 +1,7 @@
+<h1 style="font-size:40px;"><center>Garden Plots</h1>
+
+<ul><% @plots.each do |plot| %>
+  <li  style="font-size:30px;"><b>Plot Number:</b> <%= plot.number %>
+  <li  style="font-size:30px;"><b>Plants Found in This Plot:</b> <%= plot.plants_name %>
+<% end %></ul>
+<br>
