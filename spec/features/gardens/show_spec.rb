@@ -16,7 +16,7 @@ RSpec.describe 'Garden show Page' do
   describe 'displays a list of plants in the gardens plot' do
     it 'should display a list of plots belonging to this garden' do
       visit garden_path(garden_1)
-
+      
       expect(page).to have_content(plant_1.name)
       expect(page).to have_content(plant_2.name)
       expect(page).to_not have_content(plant_3.name)

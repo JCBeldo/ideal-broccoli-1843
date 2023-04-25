@@ -1,5 +1,5 @@
 <h1><center><%= "#{@garden.name}" %></h1>
 
-<% @garden.unique_fast_plants.each do |plant| %>
-  <%= plant.name %>
-<% end %>
+<ul style="font-size:30px;">All plants in this garden: <% @garden.unique_fast_plants.each do |plant| %></ul>
+  <ul style="font-size:20px; color:DarkGreen;"><%= plant.name %></ul>
+<% end %></ul>
