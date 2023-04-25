@@ -1,9 +1,9 @@
-<h1 style="font-size:40px;"><center>Garden Plots</h1>
+<h1 style="font-size:40px; background-color:Green;"><center>Garden Plots</h1>
 
 <ul><% @plots.each do |plot| %>
   <li  style="font-size:30px;"><b>Plot Number:</b> <%= plot.number %>
   <li  style="font-size:30px;"><b>Plants Found in This Plot:</b> <% plot.plants.each do |plant| %></li>
-    <ul style="font-size:25px;"><%= plant.name %></ul>
+    <ul style="font-size:25px;"><%= plant.name %><%= button_to "Remove #{plant.name}", plant_plot_path(plot.id, plant.id), method: :delete %></ul>
   <% end %>
   <br>
 <% end %></ul>
